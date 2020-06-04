@@ -1,0 +1,27 @@
+<nz-table
+  #rowSelectionTable
+  nzShowSizeChanger
+  [nzFrontPagination] = "false"
+  [nzData] = "glns"
+  [nzTotal] = "total"
+  [(nzPageIndex)] = "page"
+  [(nzPageSize)] = "page_size"
+  [nzLoading] = "loading"
+  (nzPageIndexChange) ="loadData()"
+  (nzPageSizeChange) = "loadData()"
+>
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Address</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let data of rowSelectionTable.data">
+    <td>{{ data.name }}</td>
+    <td>{{ data.age }}</td>
+    <td>{{ data.address }}</td>
+  </tr>
+  </tbody>
+</nz-table>

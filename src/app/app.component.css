@@ -1,0 +1,9 @@
+.wrapper {
+  width: 240px;
+  height: 100%;
+  padding-top: 75px;
+}
+
+button {
+  margin-bottom: 12px;
+}
